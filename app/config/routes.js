@@ -13,7 +13,7 @@ var routes = (  // added by react: React.createElement
         <Route path='/' component={Main}>
             <IndexRoute component={Home} />
             <Route path='playerOne' header='Player One' component={PromptContainer} />
-            <Route path='playerTwo/:playerOne' header='Player Two' component={PromptContainer} />
+            <Route path='playerTwo(/:playerOne)' header='Player Two' component={PromptContainer} />
         </Route>
     </Router>
 );
