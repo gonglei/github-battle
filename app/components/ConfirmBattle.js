@@ -5,11 +5,12 @@ var PropTypes = React.PropTypes;
 var UserDetails = require('./UserDetails');
 var UserDetailsWrapper = require('./UserDetailsWrapper');
 var MainContainer = require('../containers/MainContainer');
+var Loading = require('./loading');
 
 function ConfirmBattle(props) {
     return (
         props.isLoading
-        ? (<p> LOADING </p>)
+        ? (<Loading />)
         : (<MainContainer>
             <h1>Confirm Players</h1>
             <div className='col-sm-8 col-sm-offset-2'>
