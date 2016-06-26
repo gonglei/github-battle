@@ -32,9 +32,11 @@ var ConfirmBattleContainer = React.createClass({
     },
     handleInitiateBattle: function () {
         this.context.router.push({
-            pathname: 'results',
-            state: this.state.playersInfo
-        })
+            pathname: '/results',
+            state: {
+                playerInfo: this.state.playersInfo
+            }
+        });
     },
 
     render: function() {
