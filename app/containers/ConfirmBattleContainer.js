@@ -20,7 +20,7 @@ var ConfirmBattleContainer = React.createClass({
         githubHelpers.getPlayersInfo([query.playerOne, query.playerTwo]).then(function(players) {
             this.setState({
                 isLoading: false,
-                playersInfo: [players[0], players[1]]
+                playersInfo: players
             });
         }.bind(this));
     },
@@ -34,7 +34,7 @@ var ConfirmBattleContainer = React.createClass({
         this.context.router.push({
             pathname: '/results',
             state: {
-                playerInfo: this.state.playersInfo
+                playersInfo: this.state.playersInfo
             }
         });
     },
